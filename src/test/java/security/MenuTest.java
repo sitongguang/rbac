@@ -24,20 +24,17 @@ public class MenuTest {
         UserRoleAss userRoleAss2 = new UserRoleAss(1,r2,u1);
 
 
-
-        Menu menu = new Menu(1,"基本信息管理","01","");
-        menusForAdmin.add(menu);
-        menusForAdmin.add(new Menu(2,"学院管理","0101","school.ctl"));
-        menusForAdmin.add(new Menu(3,"教师管理","0102","school.ctl"));
-        menusForAdmin.add(new Menu(4,"学生管理","0103","school.ctl"));
+        Menu menu10 = new Menu(1,"基本信息管理","01","");
+        Menu menu11 = new Menu(2,"学院管理","0101","school.ctl");
+        Menu menu12 = new Menu(3,"教师管理","0102","school.ctl");
+        Menu menu13 = new Menu(4,"学生管理","0103","school.ctl");
 
 
-        menusForTeacher.add(menu);
-        menusForTeacher.add(new Menu(11,"成绩管理","0101","school.ctl"));
-        menusForTeacher.add(new Menu(12,"课表管理","0102","school.ctl"));
 
-        userMenus = new UserMenus();
-        userMenus.setUser(u1);
+        Menu menu21 = new Menu(11,"成绩管理","0201","school.ctl");
+        Menu menu22 = new Menu(12,"课表管理","0202","school.ctl");
+
+
 
     }
 
