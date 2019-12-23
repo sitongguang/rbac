@@ -11,7 +11,7 @@ import lombok.Data;
  */
 @AllArgsConstructor
 @Data
-public class Menu
+public class Menu implements Comparable
 {
 	/**
 	 * <!-- begin-user-doc -->
@@ -58,5 +58,10 @@ public class Menu
 		super();
 	}
 
+	@Override
+	public int compareTo(Object o) {
+		Menu other = (Menu)o;
+		return this.id-other.id;
+	}
 }
 
