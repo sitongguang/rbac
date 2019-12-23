@@ -11,7 +11,7 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class RoleMenuAss
+public class RoleMenuAss implements Comparable
 {
 	/**
 	 * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ public class RoleMenuAss
 	 * @ordered
 	 */
 	
-	private String id;
+	private Integer id;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -49,5 +49,10 @@ public class RoleMenuAss
 		super();
 	}
 
+    @Override
+    public int compareTo(Object o) {
+	    RoleMenuAss roleMenuAss = (RoleMenuAss)o;
+        return this.id - roleMenuAss.id;
+    }
 }
 
