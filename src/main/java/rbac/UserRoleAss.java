@@ -9,9 +9,10 @@ import lombok.Data;
  * <!--  end-user-doc  -->
  * @generated
  */
+
 @Data
 @AllArgsConstructor
-public class UserRoleAss
+public class UserRoleAss implements Comparable
 {
 	/**
 	 * <!-- begin-user-doc -->
@@ -49,5 +50,10 @@ public class UserRoleAss
 		super();
 	}
 
+	@Override
+	public int compareTo(Object o) {
+		UserRoleAss userRoleAss = (UserRoleAss)o;
+		return this.id - userRoleAss.id;
+	}
 }
 
